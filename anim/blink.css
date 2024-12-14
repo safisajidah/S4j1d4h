@@ -1,0 +1,10 @@
+/* Blinking Effect */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Initialize Animation */
+.blinking-text{
+  animation: blink 0.5s infinite;
+}

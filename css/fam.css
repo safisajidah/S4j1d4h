@@ -1,0 +1,163 @@
+/* font-family: "Playfair Display", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  --primary-color: #fffafa;
+  --column-color: #4e1609;
+  --row-color: #fff0f5;
+  --text-link: #242124;
+}
+
+.NotSupported{
+  display: none;
+}
+
+#fam{
+  display: flex; justify-content: center; align-items: center;
+  position: relative;
+  background: url(../assets/img/background/red-cloth.jpg); background-size: cover; object-fit: cover;
+  height: 100vh;
+  z-index: 1;
+}
+
+.fam-container {
+  display: flex; flex-direction: row; justify-content: center;
+  margin: 0 50px;
+}
+.fam-text{
+  display: flex; flex-direction: column; align-items: center;
+  background-color: #f9f5f1;
+  padding: 30px;
+}
+.fam-text h2{
+  font-size: 25px;
+}
+.fam-text p{
+  text-align: justify;
+  margin-top: 20px;
+  width: 500px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.fam-text .highlight {
+  color: #d2691e;
+  font-weight: bold;
+}
+.fam-img img{
+  height: 100%; width: 500px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+.fam-img img:hover{
+  transform: scale(1.05);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+/* Laptop Smaller Screen */
+@media screen and (max-width: 1180px){
+  .fam-container {
+    margin: 0 4.883vw;
+  }
+  .fam-text{
+    padding: 2.93vw;
+  }
+  .fam-text h2{
+    font-size: 2.441vw;
+  }
+  .fam-text p{
+    margin-top: 1.953vw;
+    width: 40vw;
+    font-size: 1.563vw;
+    line-height: 2.148vw;
+  }
+  .fam-img img{
+    width: 40vw;
+    border-bottom-right-radius: 1.953vw;
+    border-top-right-radius: 1.953vw;
+  }
+}
+
+/* Tablet Screen */
+@media screen and (max-width: 768px){
+  #fam{
+    height: 100%;
+    padding: 25% 0;
+  }
+  .fam-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .fam-text {
+    padding: 3.91vw;
+  }
+  .fam-text h2 {
+    font-size: 3.65vw;
+  }
+  .fam-text p {
+    margin-top: 3.26vw;
+    width: 60vw;
+    font-size: 2.34vw;
+    line-height: 3.13vw;
+  }
+  .fam-img img {
+    height: 100%;
+    width: 70vw;
+    border-bottom-right-radius: unset;
+    border-top-right-radius: unset;
+    border-bottom-left-radius: 2.60vw;
+    border-bottom-right-radius: 2.60vw;
+    cursor: unset;
+  }
+  .fam-img img:hover{
+    transform: scale(1);
+    border-top-left-radius: 0;
+  }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 480px){
+  #fam{
+    height: 100%;
+    padding: 31% 0;
+  }
+  .fam-text {
+    padding: 3.91vw;
+    color: var(--primary-color);
+    background: rgba(72,6,7, 0.6);
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    border-left: 1px solid var(--primary-color);
+  }
+  .fam-text h2 {
+    font-size: 5.5vw;
+  }
+  .fam-text p {
+    margin-top: 3.5vw;
+    width: 75vw;
+    font-size: 4.2vw;
+    line-height: 5.5vw;
+  }
+  .fam-img img {
+    width: 85vw;
+    border-bottom-left-radius: 2.60vw;
+    border-bottom-right-radius: 2.60vw;
+  }
+}
+
+/* Not supported for Nest Hub, JioPhone 2, iPhone 4 and iPhone 5 */
+@media only screen and (max-width: 1024px) and (max-height: 600px) {
+  body {
+    pointer-events: none;
+  }
+  #main{
+    display: none;
+  }
+  .NotSupported{
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+}

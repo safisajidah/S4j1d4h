@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/img/hero/SS-white-icon.png" type="image/x-icon">
+  <title>Sajidah.com</title>
+  <!-- Thanks to Font Awesome -->
+  <script src="https://kit.fontawesome.com/48a2a83fad.js" crossorigin="anonymous"></script>
+  <!-- Thanks to  Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Animation Library CSS -->
+  <link rel="stylesheet" href="./anim/fade-in.css">
+  <link rel="stylesheet" href="./anim/scale.css">
+  <link rel="stylesheet" href="./anim/blink.css">
+  <!-- CSS Partial -->
+  <link rel="stylesheet" href="./css/html.css">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+
+  <!-- If Needed (optional) -->
+  <div class="NotSupported">
+    <div class="isNotSupported">
+      <h1>Your device is not supported for this website</h1>
+    </div>
+  </div>
+
+  <div id="main">
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="nav_logo">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+        </div>
+        <img src="./assets/img/hero/sajidah-logo.png" alt="Sajidah_logo">
+        <i id="hide_menu-icon" class="bx bx-menu"></i>
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <p id="clock"></p>
+        </div>
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="index.html" class="nav-link">
+                <i class="fa-solid fa-house icon"></i>
+                <span class="link">Home</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="./page/about.html" class="nav-link">
+                <i class="fa-solid fa-user icon"></i>
+                <span class="link">About</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="./page/experience.html" class="nav-link">
+                <i class="fa-solid fa-brain icon"></i>
+                <span class="link">Experience</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="./page/education.html" class="nav-link">
+                <i class="fa-solid fa-graduation-cap icon"></i>
+                <span class="link">Education</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="./page/family.html" class="nav-link">
+                <i class="fa-solid fa-people-roof icon"></i>
+                <span class="link">Family</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="./page/media.html" class="nav-link">
+                <i class="fa-solid fa-photo-film icon"></i>
+                <span class="link">Media</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="ads-banner">
+            <h3>Advertisement</h3>
+            <hr>
+            <div class="ads-video">
+              <a href="https://www.myherbalife.com" target="_blank">
+                <video autoplay loop muted playsinline>
+                  <source src="https://res.cloudinary.com/dj0isnmcn/video/upload/f_auto,q_auto/bsuvac5njwl6cgcxuenl.mp4" type="video/mp4">
+                </video>
+              </a>
+            </div>
+          </div>            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section class="overlay"></section>
+
+    <!-- Home Layout -->
+    <section id="hero">
+
+      <!-- Video Background -->
+      <video class="video-bg" autoplay loop muted>
+        <source src="./assets/vid/hero/bg-video.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-container">
+        <div class="hero-text fade-up" >
+          <!-- Home Details -->
+          <div class="hero-details">
+            <h1>Welcome <br>to my website</h1>
+            <p>I am Safi Sajidah, a student at Universiti Teknologi Mara, located in Segamat, since 2022.</p>
+          </div>
+
+          <div class="social-link">
+            <!-- Contact info -->
+            <div class="aboutMe">
+              <button onclick="togglePopup()">
+                <span>Meet me</span>
+              </button>
+            </div>
+            <!-- Visitor Counter -->
+            <div class="visitor">
+              <p>Live Visitors:<span id="visitor-count" class="blinking-text"></span></p>
+            </div>
+            <hr class="hero-hr">
+            <!-- Social Link -->
+            <div class="socialMe">
+              <a href="https://www.facebook.com/profile.php?id=100094130419124" target="_blank"><img src="./assets/img/hero/facebook.png"></a>
+              <a href="https://www.instagram.com/safisajidah?igsh=M3B4dWluMWlucWVp" target="_blank"><img src="./assets/img/hero/instagram.png"></a>
+              <a href="https://www.tiktok.com/@dinooooorawrr_?_t=8r8tPusPJEA&_r=1" target="_blank"><img id="tiktok-icon" src="./assets/img/hero/tik-tok.png"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Home Image -->
+        <div class="hero-img fade-up">
+          <img src="./assets/img/hero/hero.png" alt="saji">
+        </div>
+      </div>
+
+      <!-- Contact Info Popup -->
+      <div class="popup-container" id="popup-1">
+        <div class="popup-overlay"></div>
+        <div class="popup-content">
+          <div class="popup-close-btn" onclick="togglePopup()">&times;</div>
+          <div class="contact-title">
+            <h1>Contact Info</h1>
+          </div>
+
+          <div class="popup-wrapper">
+            <ul class="list-ul">
+              <li><i class="fa-solid fa-envelope i-mail"></i>safisajidah@gmail.com</li>
+              <li><i class="fa-solid fa-phone i-tel"></i>011-7226 8785</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Copyright Footer -->
+    <section id="copyright">
+      <div class="copyright-container">
+        <div class="copyright-above">
+          <h1>Copyright &#169; 2024 Safi Sajidah.<span style="opacity: 0;">_</span>All Right Reserved</h1>
+        </div>
+        <div class="copyright-social">
+          <a href="https://www.facebook.com/profile.php?id=100094130419124" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://www.instagram.com/safisajidah?igsh=M3B4dWluMWlucWVp" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@dinooooorawrr_?_t=8r8tPusPJEA&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div class="copyright-last">
+          <a href=""><p>Privacy Policy</p></a>
+          <a href=""><p>Terms of Use</p></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- JS External -->
+  <script src="./js/nav.js"></script>
+  <script src="./js/popup.js"></script>
+  <script src="./js/count.js"></script>
+  <script src="./js/clock.js"></script>
+  <script src="./js/hoverForHero.js"></script>
+</body>
+</html>

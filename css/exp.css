@@ -1,0 +1,190 @@
+/* font-family: "Playfair Display", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  --primary-color: #fffafa;
+  --column-color: #4e1609;
+  --row-color: #fff0f5;
+  --text-link: #242124;
+}
+
+.NotSupported{
+  display: none;
+}
+
+#exp{
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  background: url(../assets/img/background/red-cloth.jpg);
+  background-size: cover;
+  height: 100vh;
+  z-index: 1;
+}
+.exp-container{
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--primary-color);
+}
+.exp-container h1{
+  font-family: "Playfair Display", serif; font-size: 5em; font-weight: 500;
+}
+#exp-hr{
+  width: 200px;
+}
+
+table{
+  width: 1000px;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+.tb1 thead{
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(147,67,67,1) 0%, rgba(111,27,27,1) 90% );
+}
+thead tr th{
+  color: var(--primary-color);
+  font-size: 16px;
+  padding: 15px;
+  border: 1px solid var(--primary-color);
+}
+tbody tr td{
+  padding: 20px;
+  text-align: left;
+  color: var(--text-link);
+  background: var(--row-color);
+  font-size: 16px;
+  border: 1px solid var(--primary-color);
+  text-align: center;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: fixed;
+  bottom: 35px;
+  transform: translateX(-50%);
+  color: var(--primary-color);
+  border-radius: 5px;
+  text-align: center;
+}
+.scroll-indicator h1{
+  font-size: 1.4em;
+  margin-bottom: 5px;
+  cursor: default;
+}
+.scroll-indicator i{
+  font-size: 2.2em;
+  cursor: default;
+}
+
+/* Laptop Smaller Screen */
+@media screen and (max-width: 1024px){
+  .exp-container h1{
+    font-size: 8.594vw;
+  }
+  #exp-hr{
+    width: 19.531vw;
+  }
+  table{
+    width: 85%;
+    margin-top: 2.93vw;
+  }
+}
+
+/* Tablet Screen */
+@media screen and (max-width: 768px) {
+  *{
+    overflow: scroll;
+  }
+  #exp{
+    height: 100%;
+  }
+  table {
+    margin-top: 3.906vw; 
+  }
+  .exp-container {
+    padding: 13vw 0; 
+    height: 100%;
+  }
+  .exp-container h1 {
+    font-size: 10vw; 
+    text-shadow: -0.651vw 0.521vw 0.651vw rgba(0,0,0,0.6);
+  }
+  #exp-hr{
+    width: 26.042vw;
+  }
+  .tb1 thead {
+    display: none;
+  }
+  .tb1 tr,
+  .tb1 td {
+    display: block;
+    width: 100%;
+  }
+  .tb1 tr {
+    margin-bottom: 1.5rem;
+  }
+  .tb1 tbody tr td {
+    text-align: left;
+    position: relative;
+    background: rgba(72,6,7, 0.6);
+  }
+  .tb1 tr td {
+    padding-left: 150px;
+    color: var(--primary-color);
+  }
+  .tb1 td::before {
+    content: attr(data-lable);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    text-align: left;
+    padding-left: 1.2rem;
+  }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 480px) {
+  .exp-container {
+    padding: 80px 0;
+  }
+  .tb1 tr {
+    margin-bottom: 1.5rem;
+  }
+  .tb1 tbody tr td:nth-child(4) {
+    text-align: left;
+  }
+  .tb1 tr td {
+    padding-left: 150px;
+  }
+  .tb1 td::before {
+    padding-left: 1.2rem;
+  }
+}
+
+/* Mobile Smaller Screen */
+@media screen and (max-width: 375px){
+  .scroll-indicator{
+    padding: 10px;
+    backdrop-filter: blur(2px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .scroll-indicator h1{
+    font-size: 1em;
+  }
+  .scroll-indicator i{
+    font-size: 1.8em;
+  }
+}
+
+/* Not supported for Nest Hub, JioPhone 2, iPhone 4 and iPhone 5 */
+@media only screen and (max-width: 1024px) and (max-height: 600px) {
+  body {
+    pointer-events: none;
+  }
+  #main{
+    display: none;
+  }
+  .NotSupported{
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+}

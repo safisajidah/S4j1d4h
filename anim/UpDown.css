@@ -1,0 +1,17 @@
+/* Up and Down */
+@keyframes moveY {
+  0% {
+    transform: translateY(0); /* Starting point */
+  }
+  50% {
+    transform: translateY(15px); /* Move the image down */
+  }
+  100% {
+    transform: translateY(0); /* Return to starting point */
+  }
+}
+
+/* Initially Animation */
+.UpDown {
+  animation: moveY 3s ease-in-out infinite;
+}

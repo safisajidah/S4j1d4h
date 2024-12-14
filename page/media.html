@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/hero/SS-white-icon.png" type="image/x-icon">
+  <title>Gallery</title>
+  <!-- Thanks to Font Awesome -->
+  <script src="https://kit.fontawesome.com/48a2a83fad.js" crossorigin="anonymous"></script>
+  <!-- Thanks to  Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Animation Library CSS -->
+  <link rel="stylesheet" href="../anim/fade-in.css">
+  <link rel="stylesheet" href="../anim/scale.css">
+  <!-- CSS Partial -->
+  <link rel="stylesheet" href="../css/html.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/media.css">
+</head>
+<body>
+
+  <!-- If Needed (optional) -->
+  <div class="NotSupported">
+    <div class="isNotSupported">
+      <h1>Your device is not supported for this website</h1>
+    </div>
+  </div>
+
+  <div id="main">
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="nav_logo">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+        </div>
+        <img src="../assets/img/hero/sajidah-logo.png" alt="Sajidah_logo">
+        <i id="hide_menu-icon" class="bx bx-menu"></i>
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <p id="clock"></p>
+        </div>
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="../index.html" class="nav-link">
+                <i class="fa-solid fa-house icon"></i>
+                <span class="link">Home</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="about.html" class="nav-link">
+                <i class="fa-solid fa-user icon"></i>
+                <span class="link">About</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="experience.html" class="nav-link">
+                <i class="fa-solid fa-brain icon"></i>
+                <span class="link">Experience</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="education.html" class="nav-link">
+                <i class="fa-solid fa-graduation-cap icon"></i>
+                <span class="link">Education</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="family.html" class="nav-link">
+                <i class="fa-solid fa-people-roof icon"></i>
+                <span class="link">Family</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="media.html" class="nav-link">
+                <i class="fa-solid fa-photo-film icon"></i>
+                <span class="link">Media</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="ads-banner">
+            <h3>Advertisement</h3>
+            <hr>
+            <div class="ads-video">
+              <a href="https://www.myherbalife.com" target="_blank">
+                <video autoplay loop muted playsinline>
+                  <source src="https://res.cloudinary.com/dj0isnmcn/video/upload/f_auto,q_auto/bsuvac5njwl6cgcxuenl.mp4" type="video/mp4">
+                </video>
+              </a>
+            </div>
+          </div>            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section class="overlay"></section>
+
+    <!-- Gallery Container -->
+    <section id="gal" >
+      
+      <div class="media-container fade-up">
+
+        <!-- Media -->
+        <div class="m-box">
+          <!-- Gallery -->
+          <div class="m-gallery">
+            <i class="fa-solid fa-image"></i>
+            <h1>Gallery</h1>
+          </div>
+          <!-- Video -->
+          <div class="m-video">
+            <i class="fa-solid fa-video"></i>
+            <h1>Video</h1>
+          </div>
+        </div>
+
+        <!-- Gallery Layout -->
+        <div class="gal-layout" style="display: none;">
+
+          <!-- Gallery Header -->
+          <div class="gal-header">
+            <i class="fa-solid fa-angle-left"></i>
+            <h1>Back</h1>
+          </div>
+          
+          <!-- Gallery Container -->
+          <div class="gal-container">
+            <!-- Adding a Gallery Item -->
+          </div>
+
+        </div>
+
+        <!-- Video Layout -->
+        <div class="video-layout">
+
+          <!-- Video Header -->
+          <div class="video-header">
+            <i class="fa-solid fa-angle-left"></i>
+            <h1>Back</h1>
+          </div>
+          
+          <!-- Video Container -->
+          <div class="video-container">
+            <!-- Adding a Video Item -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <!-- JS External -->
+  <script src="../js/nav.js"></script>
+  <script src="../js/clock.js"></script>
+  <script src="../js/gal.js"></script>
+  <script src="../js/video.js"></script>
+  <script src="../js/media.js"></script>
+</body>
+</html>

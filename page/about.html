@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/hero/SS-white-icon.png" type="image/x-icon">
+  <title>About</title>
+  <!-- Thanks to Font Awesome -->
+  <script src="https://kit.fontawesome.com/48a2a83fad.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Thanks to  Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Animation Library CSS -->
+  <link rel="stylesheet" href="../anim/fade-in.css">
+  <link rel="stylesheet" href="../anim/scale.css">
+  <link rel="stylesheet" href="../anim/UpDown.css">
+  <!-- CSS Partial -->
+  <link rel="stylesheet" href="../css/html.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="../css/music.css">
+  <link rel="stylesheet" href="../css/movie.css">
+</head>
+<body>
+
+  <!-- If Needed (optional) -->
+  <div class="NotSupported">
+    <div class="isNotSupported">
+      <h1>Your device is not supported for this website</h1>
+    </div>
+  </div>
+
+  <div id="main">
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="nav_logo">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+        </div>
+        <img src="../assets/img/hero/sajidah-logo.png" alt="Sajidah_logo">
+        <i id="hide_menu-icon" class="bx bx-menu"></i>
+      </div>
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <p id="clock"></p>
+        </div>
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="../index.html" class="nav-link">
+                <i class="fa-solid fa-house icon"></i>
+                <span class="link">Home</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="about.html" class="nav-link">
+                <i class="fa-solid fa-user icon"></i>
+                <span class="link">About</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="experience.html" class="nav-link">
+                <i class="fa-solid fa-brain icon"></i>
+                <span class="link">Experience</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="education.html" class="nav-link">
+                <i class="fa-solid fa-graduation-cap icon"></i>
+                <span class="link">Education</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="family.html" class="nav-link">
+                <i class="fa-solid fa-people-roof icon"></i>
+                <span class="link">Family</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="media.html" class="nav-link">
+                <i class="fa-solid fa-photo-film icon"></i>
+                <span class="link">Media</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="ads-banner">
+            <h3>Advertisement</h3>
+            <hr>
+            <div class="ads-video">
+              <a href="https://www.myherbalife.com" target="_blank">
+                <video autoplay loop muted playsinline>
+                  <source src="https://res.cloudinary.com/dj0isnmcn/video/upload/f_auto,q_auto/bsuvac5njwl6cgcxuenl.mp4" type="video/mp4">
+                </video>
+              </a>
+            </div>
+          </div>            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section class="overlay"></section>
+
+    <!-- About Layout -->
+    <section id="about" >
+
+      <div class="about-container">
+
+        <!-- About Details -->
+        <div class="about-text fade-up">
+          <h1>About Me</h1>
+          <hr class="about-hr">
+          <p>Hi! I'm someone who loves spending time with family and friends. Whether it’s a movie night or exploring new places with my sister, these are the moments that matter most to me. In the future, I dream of building my own company—something I can truly call my own. I don't have all the details figured out yet, but that's part of the journey, right? One fun thing on my bucket list is to go go-karting at different tracks. The thrill and speed are what I'm after!</p>
+        </div>
+
+        <!-- About Image -->
+        <div class="about-img fade-up">
+          <img src="../assets/img/about/about.jpeg" alt="saji">
+        </div>
+
+      </div>
+
+      <div class="scroll-indicator UpDown" id="scroll-indicator">
+        <h1>My Interest</h1>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+    </section>
+
+    <section id="music">
+      <!-- Music Box -->
+      <div class="music-container">
+
+        <!-- Playlist Box -->
+        <div class="playlist-container">
+          <h3>My Playlist</h3>
+          <ul id="playlist"></ul>
+        </div>
+
+        <!-- Music Player -->
+        <div class="player">
+          <div class="wrapper">
+            
+            <!-- Track Details -->
+            <div class="details">
+              <div class="track-art"></div>
+              <div class="track-name">Track Name</div>
+              <div class="track-artist">Track Artist</div>
+            </div>
+
+            <!-- Volume Slider -->
+            <div class="slider_container">
+              <i class="fa-solid fa-volume-off"></i>
+              <input 
+                  type="range" 
+                  min="1" 
+                  max="100" 
+                  value="99" 
+                  class="volume_slider" 
+                  onchange="setVolume()"
+              />
+              <i class="fa-solid fa-volume-high"></i>
+            </div>
+
+            <!-- Playback Controls -->
+            <div class="buttons">
+              <div class="random-track" onclick="randomTrack()">
+                <i class="fa-solid fa-shuffle fa-2x" title="random"></i>
+              </div>
+              <div class="prev-track" onclick="prevTrack()">
+                <i class="fa-solid fa-backward-step fa-2x" title="prev"></i>
+              </div>
+              <div class="playpause-track">
+                <i class="fa-solid fa-circle-play fa-5x playBtn" onclick="playpauseTrack()" title="play"></i>
+                <i class="fa-solid fa-circle-pause fa-5x pauseBtn" onclick="playpauseTrack()" style="display: none;" title="pause"></i>
+              </div>
+              <div class="next-track" onclick="nextTrack()">
+                <i class="fa-solid fa-forward-step fa-2x" title="next"></i>
+              </div>
+              <div class="repeat-track" onclick="repeatTrack()">
+                <i class="fa-solid fa-repeat fa-2x" title="repeat"></i>
+              </div>
+            </div>
+
+            <!-- Seek Slider -->
+            <div class="slider_container">
+              <div class="current-time">00:00</div>
+              <input 
+                  type="range" 
+                  min="1" 
+                  max="100" 
+                  value="0" 
+                  class="seek_slider" 
+                  onchange="seekTo()"
+              />
+              <div class="total-duration">00:00</div>
+            </div>
+
+          </div>
+        </div>
+        
+        <!-- Movie List -->
+        <div class="movie-container">
+          <h1>Favourite Movie</h1>
+          <div class="movie-box">
+            <div class="movie-card">
+              <img src="../assets/img/movie/mission-impossible.png">
+              <h2>Mission Impossible</h2>
+            </div>
+            <div class="movie-card">
+              <img src="../assets/img/movie/now-you-see-me.png">
+              <h2>Now You See Me 2</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- JS External -->
+  <script src="../js/nav.js"></script>
+  <script src="../js/popup.js"></script>
+  <script src="../js/count.js"></script>
+  <script src="../js/clock.js"></script>
+  <script src="../js/scroll_indicator.js"></script>
+  <script src="../js/music.js" defer></script>
+  <script src="../js/playlist.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+/* font-family: "Doto", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+/* font-family: "Open Sans", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --primary-color: #fffafa;
+}
+
+.movie-container {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.movie-container h1{
+  font-size: 2em; font-family: "Doto", sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movie-box{
+  display: flex; flex-direction: row; justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 0 25px;
+  transition: transform 0.3s;
+}
+
+.movie-card img {
+  width: 180px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.movie-card h2 {
+  font-size: 2em; font-family: "Open Sans", sans-serif;
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 572px) {
+  .movie-box{
+    width: min-content;
+  }
+}
